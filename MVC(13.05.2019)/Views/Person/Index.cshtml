@@ -1,0 +1,42 @@
+﻿@model MVC_13._05._2019_.Models.PersonModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @Html.DisplayFor(m => m.Name) <br />
+        @Html.DisplayFor(m => m.BirthDate) <br />
+        <hr />
+        <br />
+        <ul style="list-style:disc;">
+            @foreach (string GsmNumber in Model.GsmNumberList)
+            {
+                <li>
+                    @GsmNumber
+                    <br />
+                </li>
+            }
+
+            <hr />
+            <br />
+
+            @foreach (string Adress in Model.AdressList)
+            {
+                <li>
+                    @Adress
+                    <br />
+                </li>
+            }
+        </ul>
+
+    </div>
+</body>
+</html>
